@@ -4,11 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Moved to old.smith.wiki</title>
-<script>location.replace("https://old.smith.wiki" + location.pathname + location.search + location.hash);</script>
-<noscript><meta http-equiv="refresh" content="0; url=https://old.smith.wiki/"></noscript>
+<title>Not found · Smith Wiki</title>
+<script>
+// Card pages created after the redirect pages were generated still move to old.smith.wiki.
+if (/^\/[2-7a-z]{13}\/?$/.test(location.pathname)) location.replace("https://old.smith.wiki" + location.pathname + location.search + location.hash);
+</script>
+<link rel="preload" href="/assets/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/tokens.css">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-<p>This wiki moved to <a href="https://old.smith.wiki/">old.smith.wiki</a>. Every page keeps its path: <code>andy.smith.wiki/&lt;id&gt;/</code> is now <code>old.smith.wiki/&lt;id&gt;/</code>.</p>
+<div class="wrap">
+  <header class="mast"><a href="/">Smith Wiki</a><nav><a href="https://old.smith.wiki/">old wiki</a><a href="https://andysmith.ai/">andysmith.ai</a></nav></header>
+  <main>
+    <div class="stamp"><span>404</span><span>not found</span></div>
+    <h1 class="hx">Nothing here<i class="k blink" aria-hidden="true"></i></h1>
+    <p class="lead">There is no page at this address. andy.smith.wiki is being rebuilt; every Card of the previous wiki lives on at <a href="https://old.smith.wiki/">old.smith.wiki</a>.</p>
+  </main>
+</div>
 </body>
 </html>
